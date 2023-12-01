@@ -26,7 +26,7 @@ for line in f:
     pos = []
     for d in digits:
         pos += [(m.start(),d[1]) for m in re.finditer(d[0], line)]
-    pos = sorted(pos)
+    pos.sort()
 
     #Add the digits you found in the string, where the string starts
     for i,p in enumerate(pos) :
